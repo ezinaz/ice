@@ -72,9 +72,9 @@ if "%GRAILS_NO_PERMGEN%" == "" (
 set AGENT_STRING=-javaagent:wrapper/springloaded-1.2.1.RELEASE.jar -Xverify:none -Dspringloaded.synchronize=true -Djdk.reflect.allowGetCallerClass=true -Dspringloaded=\"%SPRINGLOADED_PARAMS%\"
 set DISABLE_RELOADING=
 if "%GRAILS_OPTS%" == "" (
-	set GRAILS_OPTS=-server -Xmx2g -Xms64M -Dfile.encoding=UTF-8
+	set GRAILS_OPTS=-server -Xmx12g -Xms64M -Dfile.encoding=UTF-8
 	if not "%GRAILS_NO_PERMGEN%" == "1" (
-		set GRAILS_OPTS=-server -Xmx2g -Xms64M -XX:PermSize=32m -XX:MaxPermSize=256m -Dfile.encoding=UTF-8
+		set GRAILS_OPTS=-server -Xmx12g -Xms64M -XX:PermSize=32m -XX:MaxPermSize=256m -Dfile.encoding=UTF-8
 	)
 )
 
